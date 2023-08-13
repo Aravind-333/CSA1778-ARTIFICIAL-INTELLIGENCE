@@ -1,0 +1,15 @@
+student(john, [math,science,history]).
+student(susanth, [english,arts]).
+student(jim, [math,science,arts]).
+
+teacher(ms_johnson, math).
+teacher(mr_lee, science).
+teacher(mrs_doe, history).
+teacher(ms_jones, english).
+teacher(mr_narendra, arts).
+
+student_teacher(S, T):-
+    student(S , Subjects),
+    member(Subject, Subjects),
+    teacher(T, Subject).
+
